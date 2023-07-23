@@ -12,21 +12,21 @@ import { useDispatch } from "react-redux";
 import { setMode } from "state";
 import profileImage from "assets/profile.jpg";
 import {
-  Toolbar,
   AppBar,
-  IconButton,
-  useTheme,
-  InputBase,
   Button,
   Box,
   Typography,
+  IconButton,
+  InputBase,
+  Toolbar,
   Menu,
   MenuItem,
+  useTheme,
 } from "@mui/material";
 
 const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
-  const theme = useTheme;
+  const theme = useTheme();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
@@ -34,7 +34,13 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const handleClose = () => setAnchorEl(null);
 
   return (
-    <AppBar sx={{ position: "static", background: "none", boxShadow: "none" }}>
+    <AppBar
+      sx={{
+        position: "static",
+        background: "none",
+        boxShadow: "none",
+      }}
+    >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* LEFT SIDE */}
         <FlexBetween>
@@ -66,6 +72,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
           <IconButton>
             <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
+
           <FlexBetween>
             <Button
               onClick={handleClick}

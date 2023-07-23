@@ -6,7 +6,6 @@ import { useGetSalesQuery } from "state/api";
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();
-  console.log("🚀 ~ file: OverviewChart.jsx:9 ~ OverviewChart ~ data:", data);
 
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];
@@ -43,7 +42,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
     );
 
     return [[totalSalesLine], [totalUnitsLine]];
-  }, [data]);
+  }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!data || isLoading) return "Loading...";
 
@@ -83,7 +82,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
           },
         },
       }}
-      margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+      margin={{ top: 20, right: 50, bottom: 50, left: 70 }}
       xScale={{ type: "point" }}
       yScale={{
         type: "linear",
@@ -94,6 +93,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       }}
       yFormat=" >-.2f"
       curve="catmullRom"
+      enableArea={isDashboard}
       axisTop={null}
       axisRight={null}
       axisBottom={{
@@ -111,13 +111,14 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       }}
       axisLeft={{
         orient: "left",
+        tickValues: 5,
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
         legend: isDashboard
           ? ""
           : `Total ${view === "sales" ? "Revenue" : "Units"} for Year`,
-        legendOffset: -40,
+        legendOffset: -60,
         legendPosition: "middle",
       }}
       enableGridX={false}

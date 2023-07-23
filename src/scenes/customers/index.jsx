@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, useTheme } from "@mui/material";
 import { useGetCustomersQuery } from "state/api";
-import Header from "components/header";
+import Header from "components/Header";
 import { DataGrid } from "@mui/x-data-grid";
 
 const Customers = () => {
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
-  console.log("🚀 ~ file: index.jsx:10 ~ Customers ~ data:", data);
+  console.log("data", data);
 
   const columns = [
     {
@@ -60,7 +60,9 @@ const Customers = () => {
           "& .MuiDataGrid-root": {
             border: "none",
           },
-          "& .MuiDataGrid-cell": { borderBottom: "none" },
+          "& .MuiDataGrid-cell": {
+            borderBottom: "none",
+          },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: theme.palette.background.alt,
             color: theme.palette.secondary[100],
@@ -70,12 +72,12 @@ const Customers = () => {
             backgroundColor: theme.palette.primary.light,
           },
           "& .MuiDataGrid-footerContainer": {
-            backgroundColor: theme.palette.primary.alt,
+            backgroundColor: theme.palette.background.alt,
             color: theme.palette.secondary[100],
             borderTop: "none",
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            backgroundColor: `${theme.palette.secondary[200]} !important`,
+            color: `${theme.palette.secondary[200]} !important`,
           },
         }}
       >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Card,
@@ -11,7 +11,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import Header from "components/header";
+import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
 
 const Product = ({
@@ -66,7 +66,9 @@ const Product = ({
         in={isExpanded}
         timeout="auto"
         unmountOnExit
-        sx={{ color: theme.palette.neutral[300] }}
+        sx={{
+          color: theme.palette.neutral[300],
+        }}
       >
         <CardContent>
           <Typography>id: {_id}</Typography>
@@ -83,10 +85,9 @@ const Product = ({
   );
 };
 
-const Products = ({}) => {
+const Products = () => {
   const { data, isLoading } = useGetProductsQuery();
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
-  console.log("🚀 ~ file: index.jsx:19 ~ Products ~ data:", data);
 
   return (
     <Box m="1.5rem 2.5rem">
@@ -95,7 +96,7 @@ const Products = ({}) => {
         <Box
           mt="20px"
           display="grid"
-          gridTemplateColumns="repeat(4, minmax(0, 1fr)"
+          gridTemplateColumns="repeat(4, minmax(0, 1fr))"
           justifyContent="space-between"
           rowGap="20px"
           columnGap="1.33%"

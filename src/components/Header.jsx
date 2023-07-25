@@ -1,7 +1,11 @@
 import { Typography, Box, useTheme } from "@mui/material";
 
-import React from "react";
-
+/**
+ * @description This is a custom Header component
+ * @param {string} title
+ * @param {string} subtitle
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Header = ({ title, subtitle }) => {
   const theme = useTheme();
   return (

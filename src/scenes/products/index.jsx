@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Card,
@@ -14,6 +14,18 @@ import {
 import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
 
+/**
+ * @description This is the Product component used for the Products page (below)
+ * @param {string} _id
+ * @param {string} name
+ * @param {string} description
+ * @param {number} price
+ * @param {number} rating
+ * @param {string} category
+ * @param {number} supply
+ * @param {object} stat
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Product = ({
   _id,
   name,
@@ -85,6 +97,10 @@ const Product = ({
   );
 };
 
+/**
+ * @description This is the Products page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Products = () => {
   const { data, isLoading } = useGetProductsQuery();
   const isNonMobile = useMediaQuery("(min-width: 1000px)");

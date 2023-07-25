@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, useTheme } from "@mui/material";
 import { useGetUserPerformanceQuery } from "state/api";
 import { useSelector } from "react-redux";
@@ -6,6 +5,10 @@ import { DataGrid } from "@mui/x-data-grid";
 import Header from "components/Header";
 import CustomColumnMenu from "components/DataGridCustomColumnMenu";
 
+/**
+ * @description This is the Performance page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Performance = () => {
   const theme = useTheme();
   const userId = useSelector((state) => state.global.userId);

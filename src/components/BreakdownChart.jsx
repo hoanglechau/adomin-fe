@@ -1,8 +1,12 @@
-import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useGetSalesQuery } from "state/api";
 
+/**
+ * @description This component contains the pie chart, and is used for the Breakdown and the Dashboard pages
+ * @param {boolean} isDashboard - Whether or not the component is being used on the Dashboard page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const BreakdownChart = ({ isDashboard = false }) => {
   const { data, isLoading } = useGetSalesQuery();
   const theme = useTheme();

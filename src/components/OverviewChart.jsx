@@ -1,8 +1,14 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { useGetSalesQuery } from "state/api";
 
+/**
+ * @description This is a custom component that contains a line graph, and is used in the Dashboard and Overview pages
+ * @param {boolean} isDashboard
+ * @param {string} view
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();

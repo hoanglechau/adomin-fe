@@ -1,8 +1,11 @@
-import React from "react";
 import { Box } from "@mui/material";
 import Header from "components/Header";
 import BreakdownChart from "components/BreakdownChart";
 
+/**
+ * @description This is the Breakdown page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Breakdown = () => {
   return (
     <Box m="1.5rem 2.5rem">

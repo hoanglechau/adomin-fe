@@ -1,7 +1,15 @@
-import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "./FlexBetween";
 
+/**
+ * @description This is a custom component for the Stat Boxes on the top left of the Dashboard page
+ * @param {string} title
+ * @param {number} value
+ * @param {string} increase
+ * @param {JSX.Element} icon
+ * @param {string} description
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const StatBox = ({ title, value, increase, icon, description }) => {
   const theme = useTheme();
   return (

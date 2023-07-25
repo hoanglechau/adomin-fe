@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Divider,
@@ -7,8 +6,8 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
   ListItemIcon,
+  ListItemText,
   Typography,
   useTheme,
 } from "@mui/material";
@@ -30,7 +29,7 @@ import {
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import FlexBetween from "components/FlexBetween";
+import FlexBetween from "./FlexBetween";
 import profileImage from "assets/profile.jpg";
 
 const navItems = [
@@ -92,6 +91,15 @@ const navItems = [
   },
 ];
 
+/**
+ * @description This is a custom component for the Sidebar with navigation links on the left side of the application
+ * @param {string} user
+ * @param {number} drawerWidth
+ * @param {boolean} isSidebarOpen
+ * @param {function} setIsSidebarOpen
+ * @param {boolean} isNonMobile
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Sidebar = ({
   user,
   drawerWidth,
@@ -99,14 +107,11 @@ const Sidebar = ({
   setIsSidebarOpen,
   isNonMobile,
 }) => {
-  // to grab the path that we're currently at
   const { pathname } = useLocation();
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const theme = useTheme();
 
-  // every time the pathname changes, we'll set the active value to the current page
-  // this will keep track of the url, and we can determine which page we're currently on
   useEffect(() => {
     setActive(pathname.substring(1));
   }, [pathname]);
@@ -124,7 +129,7 @@ const Sidebar = ({
             "& .MuiDrawer-paper": {
               color: theme.palette.secondary[200],
               backgroundColor: theme.palette.background.alt,
-              boxSizing: "border-box",
+              boxSixing: "border-box",
               borderWidth: isNonMobile ? 0 : "2px",
               width: drawerWidth,
             },
@@ -154,11 +159,8 @@ const Sidebar = ({
                     </Typography>
                   );
                 }
-                // text is the text title of the nav item
                 const lcText = text.toLowerCase();
 
-                // first, navigate to the page with the lcText
-                // then, set active to the lcText
                 return (
                   <ListItem key={text} disablePadding>
                     <ListItemButton
@@ -198,7 +200,8 @@ const Sidebar = ({
               })}
             </List>
           </Box>
-          <Box position="absolute" bottom="2rem">
+
+          <Box sx={{ mb: "2rem" }}>
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
@@ -226,7 +229,10 @@ const Sidebar = ({
                 </Typography>
               </Box>
               <SettingsOutlined
-                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+                sx={{
+                  color: theme.palette.secondary[300],
+                  fontSize: "25px ",
+                }}
               />
             </FlexBetween>
           </Box>

@@ -1,3 +1,7 @@
+/**
+ * @description This file contains the geographic data that is used in the Geography page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 export const geoData = {
     "type": "FeatureCollection",
     "features": [

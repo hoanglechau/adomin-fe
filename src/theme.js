@@ -1,3 +1,8 @@
+/**
+ * @description This file contains the theme settings for Material UI
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
+
 // color design tokens export
 export const tokensDark = {
   grey: {
@@ -43,7 +48,6 @@ export const tokensDark = {
 };
 
 // function that reverses the color palette
-// this is in order to use the same color names for both light and dark mode
 function reverseTokens(tokensDark) {
   const reversedTokens = {};
   Object.entries(tokensDark).forEach(([key, val]) => {
@@ -58,7 +62,6 @@ function reverseTokens(tokensDark) {
   });
   return reversedTokens;
 }
-// reverse the color palette for light mode
 export const tokensLight = reverseTokens(tokensDark);
 
 // mui theme settings

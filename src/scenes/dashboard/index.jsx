@@ -1,4 +1,3 @@
-import React from "react";
 import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
 import {
@@ -21,6 +20,10 @@ import OverviewChart from "components/OverviewChart";
 import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
 
+/**
+ * @description This is the Dashboard page
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");

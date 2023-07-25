@@ -17,6 +17,10 @@ import Breakdown from "scenes/breakdown";
 import Admin from "scenes/admin";
 import Performance from "scenes/performance";
 
+/**
+ * @description This file contains all the routes for the application
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);

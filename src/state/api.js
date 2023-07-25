@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+/**
+ * @description This is the api file where we define all the endpoints that we will be using in our application. This project is using RTK Query
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   reducerPath: "adminApi",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   LightModeOutlined,
   DarkModeOutlined,
@@ -24,6 +24,13 @@ import {
   useTheme,
 } from "@mui/material";
 
+/**
+ * @description This is a custom Navbar component
+ * @param {string} user
+ * @param {boolean} isSidebarOpen
+ * @param {function} setIsSidebarOpen
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();

@@ -8,6 +8,10 @@ import { Provider } from "react-redux";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { api } from "state/api";
 
+/**
+ * @description This file is the root of our application. It also contains the Redux store
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const store = configureStore({
   reducer: {
     global: globalReducer,

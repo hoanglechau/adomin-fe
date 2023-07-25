@@ -1,4 +1,3 @@
-import React from "react";
 import { Search } from "@mui/icons-material";
 import { IconButton, TextField, InputAdornment } from "@mui/material";
 import {
@@ -9,6 +8,13 @@ import {
 } from "@mui/x-data-grid";
 import FlexBetween from "./FlexBetween";
 
+/**
+ * @description This component is used for the toolbar on top of the table in the Transactions page
+ * @param {string} searchInput
+ * @param {function} setSearchInput
+ * @param {function} setSearch
+ * @author [Hoang Le Chau](https://github.com/hoanglechau)
+ */
 const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
   return (
     <GridToolbarContainer>

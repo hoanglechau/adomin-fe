@@ -1,70 +1,303 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT TITLE -->
 
-## Available Scripts
+# **Adomin - An E-Commerce Admin Dashboard**
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#project-description">Project Description</a></li>
+        <li><a href="#user-stories">User Stories</a></li>
+        <li><a href="#notable-features">Notable Features</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#api-endpoints">API Endpoints</a>
+      <ul>
+        <li><a href="#client-apis">Client APIs</a></li>
+        <li><a href="#general-apis">General APIs</a></a></li>
+        <li><a href="#management-apis">Management APIs</a></a></li>
+        <li><a href="#sales-apis">Sales APIs</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#entity-relationship-diagram">Entity Relationship Diagram</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#links">Links</a></li>
+  </ol>
+</details>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- ABOUT THE PROJECT -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **About The Project**
 
-### `npm test`
+[![Adomin Screenshot One][screenshot-one]](https://example.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Adomin Screenshot Two][screenshot-two]](https://example.com)
 
-### `npm run build`
+### **Project Description**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Adomin is a full-stack e-commerce Admin Dashboard app that displays graphs and tables of sales and performance stats.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **User Stories**
 
-### `npm run eject`
+- As a user, I can view a Dashboard with general sales information in table and graph forms.
+- As a user, I can view a list of products.
+- As a user, I can view a table with a list of customers.
+- As a user, I can view a table with a list of transactions.
+- As a user, I can view a world map showing where the users are located.
+- As a user, I can view a line graph displaying an overview of general sales revenue and profit.
+- As a user, I can view a chart of daily sales.
+- As a user, I can view a chart of monthly sales.
+- As a user, I can view a pie chart breakdown of sales by category.
+- As a user, I can view a table with a list of admins.
+- As a user, I can view a table with my Affiliate Sales Performance.
+- As a user, I can toggle between light and dark modes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Notable Features**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Users can switch between dark and light modes.
+- In the Transactions page, users can choose to hide or show individual columns.
+- In the Transactions page, users can change the display density of the table information (Compact, Standard, or Comfortable).
+- In the Transactions page, users can download the data in CSV format.
+- In the Transactions page, users can print the table.
+- In the Overview page, users can change the unit of currency of the vertical axis (Units or Sales).
+- In the Daily page, users can change the time period shown on the chart.
+- All tables have server-side paginations. Users can change the number of rows per page, and change pages.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+### **Built With**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- React Router
+- Redux
+- Redux Toolkit
+- Material UI
+- nivo (charts)
+- Node.js
+- Express
+- MongoDB
+- ESLint
+- Prettier
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- API ENDPOINTS -->
 
-### Analyzing the Bundle Size
+## **API Endpoints**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Client APIs**
 
-### Making a Progressive Web App
+```js
+/**
+ * @description Get all products
+ * @param {*} req
+ * @param {*} res
+ * @route GET /client/products
+ * @access Public
+ */
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```js
+/**
+ * @description Get all customers
+ * @param {*} req
+ * @param {*} res
+ * @route GET /client/customers
+ * @access Public
+ */
+```
 
-### Advanced Configuration
+```js
+/**
+ * @description Get the locations of all customers
+ * @param {*} req
+ * @param {*} res
+ * @route GET /client/geography
+ * @access Public
+ */
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment
+### **General APIs**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```js
+/**
+ * @description Get a single user by ID
+ * @param {id} req
+ * @param {*} res
+ * @route GET /general/user/:id
+ * @access Public
+ */
+```
 
-### `npm run build` fails to minify
+```js
+/**
+ * @description Get the Dashboard stats
+ * @param {*} req
+ * @param {*} res
+ * @route GET /general/dashboard
+ * @access Public
+ */
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### **Management APIs**
+
+```js
+/**
+ * @description Get all admins
+ * @param {*} req
+ * @param {*} res
+ * @route GET /management/admins
+ * @access Public
+ */
+```
+
+```js
+/**
+ * @description Get the performance stats of users
+ * @param {id} req
+ * @param {*} res
+ * @route GET /management/performance/:id
+ * @access Public
+ */
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### **Sales APIs**
+
+```js
+/**
+ * @description Get all sales data
+ * @param {*} req
+ * @param {*} res
+ * @route GET /sales/sales
+ * @access Public
+ */
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- ENTITY RELATIONSHIP DIAGRAM -->
+
+## **Entity Relationship Diagram**
+
+[![Adomin ERD][erd]](https://example.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- GETTING STARTED -->
+
+## **Getting Started**
+
+### **Prerequisites**
+
+1. Check your version of Node.js and npm
+   ```sh
+   node -v
+   npm -v
+   ```
+2. Install Node.js and npm if needed at [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### **Installation**
+
+#### _Backend_
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/hoanglechau/adomin-be.git
+   cd adomin-be
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Create an `.env` file with the following contents
+   ```js
+   MONGO_URI=your_mongodb_uri
+   PORT=your_port // default value: 9000
+   ```
+4. Replace the default values with your own values for `PORT` (optional), and `MONGO_URI` in the `.env` file
+5. Start the server
+   ```sh
+   npm start
+   ```
+
+#### _Frontend_
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/hoanglechau/adomin-fe.git
+   cd adomin-fe
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Create an `.env` file with the following contents
+   ```js
+   REACT_APP_BASE_URL=your_api_url // default: http://localhost:5001
+   ```
+4. Replace the value of `REACT_APP_BASE_URL` with the URL of your deployed API
+5. Build the app
+   ```sh
+   npm run build
+   ```
+6. Run the app
+   ```sh
+   npm run start
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<!-- LINKS -->
+
+## **Links**
+
+- Frontend Repository: [https://github.com/hoanglechau/adomin-fe](https://github.com/hoanglechau/adomin-fe)
+- Backend Repository: [https://github.com/hoanglechau/adomin-be](https://github.com/hoanglechau/adomin-be)
+- Deployed Frontend: [https://adomin.vercel.app/](https://adomin.vercel.app/)
+- Deployed Backend: [https://adomin-be-production.up.railway.app/](https://adomin-be-production.up.railway.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[screenshot-one]: public/images/Adomin.png
+[screenshot-two]: public/images/Adomin%202.png
+[erd]: public/images/Adomin%20ERD.png

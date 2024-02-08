@@ -8,6 +8,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#links">Links</a></li>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
@@ -36,9 +37,21 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#links">Links</a></li>
   </ol>
 </details>
+
+---
+
+<!-- LINKS -->
+
+## **Links**
+
+- Frontend Repository: [https://github.com/hoanglechau/adomin-fe](https://github.com/hoanglechau/adomin-fe)
+- Backend Repository: [https://github.com/hoanglechau/adomin-be](https://github.com/hoanglechau/adomin-be)
+- Deployed Frontend: [https://adomin.vercel.app/](https://adomin.vercel.app/)
+- Deployed Backend: [https://adomin-be-production.up.railway.app/](https://adomin-be-production.up.railway.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
@@ -283,17 +296,6 @@ Adomin is a full-stack e-commerce Admin Dashboard app that displays graphs and t
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
-
-<!-- LINKS -->
-
-## **Links**
-
-- Frontend Repository: [https://github.com/hoanglechau/adomin-fe](https://github.com/hoanglechau/adomin-fe)
-- Backend Repository: [https://github.com/hoanglechau/adomin-be](https://github.com/hoanglechau/adomin-be)
-- Deployed Frontend: [https://adomin.vercel.app/](https://adomin.vercel.app/)
-- Deployed Backend: [https://adomin-be-production.up.railway.app/](https://adomin-be-production.up.railway.app/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
